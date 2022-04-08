@@ -68,6 +68,8 @@ makeConfig() {
 	echo "---------------"
 	read -p "Giới hạn tốc độ, nếu không muốn giới hạn nhập 0 :" makeSpeedlimit
 	echo "---------------"
+        read -p "Địa chỉ nút:" ipsever
+	echo "---------------"
 
 	rm -f /etc/XrayR/config.yml
 	if [[ -z $(~/.acme.sh/acme.sh -v 2>/dev/null) ]]; then
@@ -124,7 +126,7 @@ Nodes:
           ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for dsable
       CertConfig:
         CertMode: dns # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "node1.test.com" # Domain to cert
+        CertDomain: $ipsever # Domain to cert
         CertFile: /etc/XrayR/cert/node1.test.com.cert  # Provided if the CertMode is file
         KeyFile: /etc/XrayR/cert/node1.test.com.key
         Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
