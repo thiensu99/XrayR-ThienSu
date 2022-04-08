@@ -30,13 +30,13 @@ for ((int = 0; int < ${#REGEX[@]}; int++)); do
 	[[ $(echo "$SYS" | tr '[:upper:]' '[:lower:]') =~ ${REGEX[int]} ]] && SYSTEM="${RELEASE[int]}" && [[ -n $SYSTEM ]] && break
 done
 
-[[ -z $SYSTEM ]] && red "Hệ thống hiện tại không hỗ trợ VPS, vui lòng sử dụng hệ điều hành chính" && exit 1
+[[ -z $SYSTEM ]] && red "VPS không tương thích, vui lòng sử dụng hệ điều hành chính" && exit 1
 
 archAffix() {
 	case "$(uname -m)" in
   x86_64 | x64 | amd64) return 0 ;;
 	aarch64 | arm64) return 0 ;;
-	*) red "Kiến trúc CPU không được hỗ trợ, tập lệnh sắp thoát!" ;;
+	*) red "Cầu hình CPU không được hỗ trợ, tập lệnh sắp thoát!" ;;
 	esac
 
 	return 0
