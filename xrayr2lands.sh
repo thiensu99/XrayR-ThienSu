@@ -1,6 +1,6 @@
 #!/binstall
 
-# 控制台字体
+# Bảng điều khiển
 red() {
 	echo -e "\033[31m\033[01m$1\033[0m"
 }
@@ -13,7 +13,7 @@ yellow() {
 	echo -e "\033[33m\033[01m$1\033[0m"
 }
 
-# 判断系统及定义系统安装依赖方式
+# Xác định hệ thống và xác định các phụ thuộc cài đặt hệ thống
 REGEX=("debian" "ubuntu" "centos|red hat|kernel|oracle linux|alma|rocky" "'amazon linux'")
 RELEASE=("Debian" "Ubuntu" "CentOS" "CentOS" "Alpine")
 PACKAGE_UPDATE=("apt -y update" "apt -y update" "yum -y update" "yum -y update")
@@ -51,14 +51,14 @@ install() {
 install_XrayR() {
 	[[ -z $(type -P curl) ]] && ${PACKAGE_UPDATE[int]} && ${PACKAGE_INSTALL[int]} curl
 	[[ -z $(type -P socat) ]] && ${PACKAGE_UPDATE[int]} && ${PACKAGE_INSTALL[int]} socat
-	bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
+	bash <(curl -Ls https://raw.githubusercontent.com/AikoCute/XrayR-release/install/install.sh)
 }
 
 makeConfig() {
     echo "---------------"
 	read -p "Nhập loại website của bạn ( V2board, SsPanel ) :" airPanel
 	echo "---------------"
-	read -p "Nhập link website ( https://2lands.me ) :" airWebsite
+	read -p "Nhập link website ( https://4ggiare.site ) :" airWebsite
 	echo "---------------"
 	read -p "API key của web :" airAPIKey
 	echo "---------------"
