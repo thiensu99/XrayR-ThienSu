@@ -56,12 +56,7 @@ install_XrayR() {
 
 makeConfig() {
     echo "---------------"
-	read -p "Nhập loại website của bạn ( V2board, SsPanel ) :" airPanel
-	echo "---------------"
-	read -p "Nhập link website ( https://4ggiare.site ) :" airWebsite
-	echo "---------------"
-	read -p "API key của web :" airAPIKey
-	echo "---------------"
+
 	read -p "Số node ID :" makeNodeID
 	echo "---------------"
 	read -p "Giới hạn số thiết bị, nếu không muốn giới hạn hãy nhập 0 :" makeLimitdevice
@@ -94,10 +89,10 @@ ConnetionConfig:
   BufferSize: 16 # The internal cache size of each connection, kB 
 Nodes:
   -
-    PanelType: "$airPanel" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
+    PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
     ApiConfig:
-      ApiHost: "$airWebsite"
-      ApiKey: "$airAPIKey"
+      ApiHost: "https://4ggiare.site"
+      ApiKey: "4ggiare4ggiare4ggiare"
       NodeID: $makeNodeID
       NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
       Timeout: 10 # Timeout for the api request
