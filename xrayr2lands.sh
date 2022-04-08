@@ -1,6 +1,6 @@
 #!/binstall
 
-# Bảng điều khiển
+# bảng điều khiển
 red() {
 	echo -e "\033[31m\033[01m$1\033[0m"
 }
