@@ -1,4 +1,4 @@
-# 2lands-xrayr
+# Xrayr Thiên Sứ Dz
 
 XrayR nhưng cài nhanh hơn bình thường
 
