@@ -51,7 +51,7 @@ install() {
 install_XrayR() {
 	[[ -z $(type -P curl) ]] && ${PACKAGE_UPDATE[int]} && ${PACKAGE_INSTALL[int]} curl
 	[[ -z $(type -P socat) ]] && ${PACKAGE_UPDATE[int]} && ${PACKAGE_INSTALL[int]} socat
-	bash <(curl -Ls https://raw.githubusercontent.com/thiensu99/XrayR-release/master/install.sh)
+	bash <(curl -Ls https://raw.githubusercontent.com/Aikocute/XrayR-release/master/install.sh)
 }
 
 makeConfig() {
