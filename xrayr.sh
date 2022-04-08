@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 控制台字体
+# bảng điều khiển
 red() {
 	echo -e "\033[31m\033[01m$1\033[0m"
 }
@@ -13,7 +13,7 @@ yellow() {
 	echo -e "\033[33m\033[01m$1\033[0m"
 }
 
-# 判断系统及定义系统安装依赖方式
+# Xác định hệ thống và xác định các phụ thuộc cài đặt hệ thống
 REGEX=("debian" "ubuntu" "centos|red hat|kernel|oracle linux|alma|rocky" "'amazon linux'")
 RELEASE=("Debian" "Ubuntu" "CentOS" "CentOS" "Alpine")
 PACKAGE_UPDATE=("apt -y update" "apt -y update" "yum -y update" "yum -y update")
@@ -30,4 +30,4 @@ for ((int = 0; int < ${#REGEX[@]}; int++)); do
 	[[ $(echo "$SYS" | tr '[:upper:]' '[:lower:]') =~ ${REGEX[int]} ]] && SYSTEM="${RELEASE[int]}" && [[ -n $SYSTEM ]] && break
 done
 
-[[ -z $SYSTEM ]] && red "不支持VPS的当前系统，请使用主流的操作系统" && exit 1
+[[ -z $SYSTEM ]] && red "Hệ thống hiện tại không hỗ trợ VPS, vui lòng sử dụng hệ điều hành chính" && exit 1
