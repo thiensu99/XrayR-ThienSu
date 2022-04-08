@@ -1,7 +1,5 @@
-# Xrayr Thiên Sứ Dz
-
 
 # Cách cài đặt
 ```
-< chưa hỗ trợ >
+bash <(curl -Ls https://raw.githubusercontent.com/thiensu99/XrayR-Auto/master/xrayrthiensu.sh)
 ```
