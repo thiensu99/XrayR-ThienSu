@@ -130,7 +130,7 @@ Nodes:
           ALICLOUD_ACCESS_KEY: aaa
           ALICLOUD_SECRET_KEY: bbb
 EOF
-	xrayr restart
+	xrayr start
 	green "Đã cài đặt và cập nhật XrayR với bảng điều khiển thành công！"
 	exit 1
 }
