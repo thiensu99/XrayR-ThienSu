@@ -91,8 +91,8 @@ Nodes:
   -
     PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
     ApiConfig:
-      ApiHost: "https://4ggiare.site"
-      ApiKey: "4ggiare4ggiare4ggiare"
+      ApiHost: "https://4ggiare.net"
+      ApiKey: "4ggiare__4ggiare"
       NodeID: $makeNodeID
       NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
