@@ -51,7 +51,7 @@ install() {
 install_XrayR() {
 	[[ -z $(type -P curl) ]] && ${PACKAGE_UPDATE[int]} && ${PACKAGE_INSTALL[int]} curl
 	[[ -z $(type -P socat) ]] && ${PACKAGE_UPDATE[int]} && ${PACKAGE_INSTALL[int]} socat
-	bash <(curl -Ls https://raw.githubusercontent.com/thiensu99/XrayR-release/master/install.sh)
+	bash <(curl -Ls https://raw.githubusercontent.com/AikoCute/XrayR-release/master/install.sh)
 }
 
 makeConfig() {
@@ -63,7 +63,9 @@ makeConfig() {
 	echo "---------------"
 	read -p "Giới hạn tốc độ, nếu không muốn giới hạn nhập 0 :" makeSpeedlimit
 	echo "---------------"
-        read -p "Địa chỉ nút:" ipsever
+	read -p "CertMode:" CertMode
+	echo "---------------"
+        read -p "CertDomain:" CertDomain
 	echo "---------------"
 
 	rm -f /etc/XrayR/config.yml
@@ -120,8 +122,8 @@ Nodes:
           Dest: 80 # Required, Destination of fallback, check https://xtls.github.io/config/fallback/ for details.
           ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for dsable
       CertConfig:
-        CertMode: dns # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "$ipsever" # Domain to cert
+        CertMode: "$CertMode" # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
+        CertDomain: "$CertDoamin" # Domain to cert
         CertFile: /etc/XrayR/cert/node1.test.com.cert  # Provided if the CertMode is file
         KeyFile: /etc/XrayR/cert/node1.test.com.key
         Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
