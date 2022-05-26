@@ -57,7 +57,7 @@ install_XrayR() {
 makeConfig() {
     echo "---------------"
 
-	read -p "Số node ID :" makeNodeID
+	read -p "Số node ID :" ssNodeID
 	echo "---------------"
 	read -p "Giới hạn số thiết bị, nếu không muốn giới hạn hãy nhập 0 :" makeLimitdevice
 	echo "---------------"
@@ -95,7 +95,7 @@ Nodes:
     ApiConfig:
       ApiHost: "https://4ggiare.net"
       ApiKey: "4ggiare4ggiare4ggiare"
-      NodeID: $makeNodeID
+      NodeID: $ssNodeID
       NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
       EnableVless: false # Enable Vless for V2ray Type
@@ -122,7 +122,7 @@ Nodes:
           Dest: 80 # Required, Destination of fallback, check https://xtls.github.io/config/fallback/ for details.
           ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for dsable
       CertConfig:
-        CertMode: "$CertMode" # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
+        CertMode: $CertMode # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
         CertDomain: "$CertDomain" # Domain to cert
         CertFile: /etc/XrayR/cert/node1.test.com.cert  # Provided if the CertMode is file
         KeyFile: /etc/XrayR/cert/node1.test.com.key
