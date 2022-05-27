@@ -124,7 +124,7 @@ Nodes:
       CertConfig:
         CertMode: $CertMode # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
         CertDomain: "$CertDomain" # Domain to cert
-        CertFile: /root/cert/server.pem  # Provided if the CertMode is file
+        CertFile: /root/cert/fullchain.pem  # Provided if the CertMode is file
         KeyFile: /root/cert/privkey.pem
         Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
         Email: test@me.com
