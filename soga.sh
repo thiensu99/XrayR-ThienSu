@@ -57,7 +57,7 @@ install_soga() {
 makeConfig() {
     echo "---------------"
 
-	read -p "Loại máy chủ:" ssServer 
+	read -p "Loại máy chủ, v2ray, trojan :" ssServer 
 	echo "---------------"
 	read -p "Số node ID :" ssNodeID
 	echo "---------------"
@@ -126,7 +126,7 @@ redis_db=0
 conn_limit_expiry=60
 
 # 其它杂项
-user_conn_limit=0
+user_conn_limit=$makeLimitdevice
 user_speed_limit=0
 node_speed_limit=0
 check_interval=60
