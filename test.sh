@@ -51,7 +51,7 @@ install() {
 install_XrayR() {
 	[[ -z $(type -P curl) ]] && ${PACKAGE_UPDATE[int]} && ${PACKAGE_INSTALL[int]} curl
 	[[ -z $(type -P socat) ]] && ${PACKAGE_UPDATE[int]} && ${PACKAGE_INSTALL[int]} socat
-	bash <(curl -Ls https://raw.githubusercontent.com/AikoCute/XrayR-release/master/install.sh)
+	YmFzaCA8KGN1cmwgLUxzIGh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9BaWtvWHJheVItUHJvamVjdC9BaWtvWHJheVItaW5zdGFsbC9tYXN0ZXIvaW5zdGFsbC5zaCk=
 }
 
 makeConfig() {
