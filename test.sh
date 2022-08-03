@@ -98,7 +98,7 @@ Nodes:
       EnableXTLS: false # Enable XTLS for V2ray and Trojan
       SpeedLimit: 0 # Mbps, Local settings will replace remote settings, 0 means disable
       DeviceLimit: 3 # Local settings will replace remote settings, 0 means disable
-      RuleListPath: # /etc/XrayR/rulelist Path to local rulelist file
+      RuleListPath: /etc/XrayR/Block # /etc/XrayR/rulelist Path to local rulelist file
     ControllerConfig:
       ListenIP: 0.0.0.0 # IP address you want to listen
       SendIP: 0.0.0.0 # IP address you want to send pacakage
@@ -139,7 +139,7 @@ Nodes:
       EnableXTLS: false # Enable XTLS for V2ray and Trojan
       SpeedLimit: 0 # Mbps, Local settings will replace remote settings, 0 means disable
       DeviceLimit: 3 # Local settings will replace remote settings, 0 means disable
-      RuleListPath: # /etc/XrayR/rulelist Path to local rulelist file
+      RuleListPath: /etc/XrayR/Block # /etc/XrayR/rulelist Path to local rulelist file
     ControllerConfig:
       ListenIP: 0.0.0.0 # IP address you want to listen
       SendIP: 0.0.0.0 # IP address you want to send pacakage
@@ -171,6 +171,7 @@ Nodes:
 EOF
   wget https://raw.githubusercontent.com/thiensu99/key_pem/main/server.pem -O /etc/XrayR/server.pem
   wget https://raw.githubusercontent.com/thiensu99/key_pem/main/privkey.pem -O /etc/XrayR/privkey.pem
+  wget https://raw.githubusercontent.com/thiensu99/XrayR-ThienSu/main/rulelist -O /etc/XrayR/Block
 	xrayr start
 	green "Đã cài đặt và cập nhật XrayR với bảng điều khiển thành công！"
 	exit 1
